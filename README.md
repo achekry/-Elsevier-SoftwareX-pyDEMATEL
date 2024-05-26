@@ -18,4 +18,4 @@ This separation is designed to offer two ways of using the tool:
 To install the `pyDEMATELSolver` package, use the following command:
 
 ```sh
-pip install pyDEMATELSolver
+pip install pyDEMATEL_Package
