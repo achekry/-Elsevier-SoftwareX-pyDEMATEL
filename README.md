@@ -156,7 +156,7 @@ solver.drawCurve()
 **Note** : To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
 ## Authors
 - Abderrahman Chekry
-- Jamal BakkaS
+- Jamal Bakkas
 - Mohamed Hanine
 - Elizabeth Caro Montero
 - Mirtha Silvana Garat de Marin
