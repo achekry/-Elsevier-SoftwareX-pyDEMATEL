@@ -61,7 +61,7 @@ To start using `pyDEMATEL`, follow these steps:
 [Step 3: Detailed description of the step]
 
 ###Example
-Here is an example of how to use the graphical interface of the software:
+**Here is an example of how to use the graphical interface of the software:**
 
 remplir a partir de l exemple illustratif????
 ```sh
@@ -70,7 +70,7 @@ app = DEMATELWindow.DEMATELWindow()
 app.window.mainloop()
 ```
 
-Here is an example of how to use the graphical interface of the software:
+**Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method:**
 ```sh
 from pyDEMATEL import FuzzyDEMATELSolver
 ```
@@ -153,7 +153,7 @@ Generating the graph:
 ```sh
 solver.drawCurve()
 ```
-
+**Note:**To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
 ## Authors
 - Abderrahman Chekry
 - Jamal BakkaS
@@ -164,6 +164,3 @@ solver.drawCurve()
 
 ## Contact
 If you have any questions or suggestions, feel free to contact us at a.chekry@uca.ac.ma.
-
-
-
