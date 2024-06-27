@@ -31,10 +31,10 @@ This project is licensed under the BSD License - see the LICENSE file for detail
 
 ## Features
 
-- **Feature 1**: [Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.]
-- **Feature 2**: [Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".]
-- **Feature 3**: [Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.]
-- **Feature 3**: [Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.]
+- **Feature 1**: Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.
+- **Feature 2**: Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".
+- **Feature 3**: Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.
+- **Feature 4**: Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.
 
 ## Installation
 
@@ -55,22 +55,22 @@ pip install pyDEMATEL
 
 ## Usage
 To start using `pyDEMATEL`, follow these steps:
-
-[Step 1: Detailed description of the step]
-[Step 2: Detailed description of the step]
-[Step 3: Detailed description of the step]
+- **Step 1**:  Enter the number of experts and the number of factors.
+- **Step 2**:  Provide the names of experts and factors.
+- **Step 3**:  Enter the evaluation matrix for each expert.
+- **Step 1**:  Generate the results.
 
 ###Example
-**Here is an example of how to use the graphical interface of the software:**
+**Here is an example of how to use the graphical interface of the software**:
+Use the following code to execute the graphical interface of the `pyDEMATEL` software.
 
-remplir a partir de l exemple illustratif????
 ```sh
 from pyDEMATEL import DEMATELWindow
 app = DEMATELWindow.DEMATELWindow()
 app.window.mainloop()
 ```
 
-**Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method:**
+**Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method**:
 ```sh
 from pyDEMATEL import FuzzyDEMATELSolver
 ```
@@ -153,7 +153,7 @@ Generating the graph:
 ```sh
 solver.drawCurve()
 ```
-**Note:**To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
+**Note** : To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
 ## Authors
 - Abderrahman Chekry
 - Jamal BakkaS
