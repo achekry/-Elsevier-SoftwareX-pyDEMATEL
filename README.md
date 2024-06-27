@@ -31,10 +31,10 @@ This project is licensed under the BSD License - see the LICENSE file for detail
 
 ## Features
 
-- Feature 1: [Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.]
-- Feature 2: [Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".]
-- Feature 3: [Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.]
-- Feature 3: [Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.]
+- **Feature 1**: [Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.]
+- **Feature 2**: [Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".]
+- **Feature 3**: [Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.]
+- **Feature 3**: [Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.]
 
 ## Installation
 
@@ -97,7 +97,7 @@ factors = [ "A1 ",
            "A18"] 
 ```
            
-Linguistic evaluation matrix of marine experts’ consensus. source  https://www.sciencedirect.com/science/article/pii/S0950423015300498
+Linguistic evaluation matrix of marine experts’ consensus: source  https://www.sciencedirect.com/science/article/pii/S0950423015300498
 
 ```sh
 valeurs=[
@@ -123,7 +123,7 @@ valeurs=[
 
 matrices = np.array([np.array(valeurs, dtype=object)])
 ```
-Création d'une instance DEMATELSolver
+Creating an instance of FuzzyDEMATELSolver:
 ```sh
 solver = FuzzyDEMATELSolver()
 solver.setMatrix(matrices)
@@ -137,7 +137,7 @@ solver.setNumberOfFactors(18)
 print(solver.getExperts())
 print(solver.getFactors())
 ```
-Exécution des étapes
+Executing the steps of the FuzzyDEMATEL method:
 ```sh
 solver.step1()
 print(solver.getFuzzyDirectInfluenceMatrix())
@@ -149,7 +149,7 @@ solver.step4()
 print(solver.getRalation())
 print(solver.getProminence())
 ```
-Generation du graphique
+Generating the graph:
 ```sh
 solver.drawCurve()
 ```
