@@ -60,7 +60,7 @@ To start using `pyDEMATEL`, follow these steps:
 - **Step 3**:  Enter the evaluation matrix for each expert.
 - **Step 1**:  Generate the results.
 
-###Example
+### Example
 **Here is an example of how to use the graphical interface of the software**:
 Use the following code to execute the graphical interface of the `pyDEMATEL` software.
 
