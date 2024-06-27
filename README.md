@@ -58,7 +58,7 @@ To start using `pyDEMATEL`, follow these steps:
 - **Step 1**:  Enter the number of experts and the number of factors.
 - **Step 2**:  Provide the names of experts and factors.
 - **Step 3**:  Enter the evaluation matrix for each expert.
-- **Step 1**:  Generate the results.
+- **Step 4**:  Generate the results.
 
 ### Example
 **Here is an example of how to use the graphical interface of the software**:
