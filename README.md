@@ -1,5 +1,169 @@
 # pyDEMATEL
+
+[![License: BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
+
+## Table of Contents
+- [Overview](#overview)
+- [License](#license)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Authors](#authors)
+- [Contact](#contact)
+
+
+## Overview
+
+The `pyDEMATEL` tool is designed to implement and facilitate the use of the DEMATEL and Fuzzy DEMATEL methods. The tool comprises three distinct classes: `DEMATELSolver`, `FuzzyDEMATELSolver`, and `DEMATELWindow`.
+
+- **DEMATELSolver**: Implements the standard DEMATEL method.
+- **FuzzyDEMATELSolver**: Implements the Fuzzy DEMATEL method.
+- **DEMATELWindow**: Provides a graphical interface for users to interact with the tool.
+
+This separation is designed to offer two ways of using the tool:
+
+1. **Graphical Interface Mode**: Allows decision-makers to use the tool directly via its graphical interface provided by the `DEMATELWindow` class.
+2. **Package Integration Mode**: Allows developers to directly integrate the `DEMATELSolver` or `FuzzyDEMATELSolver` classes into their own applications, without needing the graphical interface.
+
+## License
+This project is licensed under the BSD License - see the LICENSE file for details.
+
+## Features
+
+- Feature 1: [Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.]
+- Feature 2: [Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".]
+- Feature 3: [Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.]
+- Feature 3: [Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.]
+
 ## Installation
+
+### Prerequisites
+Before you begin, ensure you have met the following requirements:
+- Python 3.x
+- [tkinter](https://docs.python.org/3/library/tkinter.html)
+- [numpy](https://numpy.org/)
+- [matplotlib](https://matplotlib.org/)
+- [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+
+### Steps to Install
+To install the `pyDEMATEL` package, use the following command:
 
 ```sh
 pip install pyDEMATEL
+```
+
+## Usage
+To start using `pyDEMATEL`, follow these steps:
+
+[Step 1: Detailed description of the step]
+[Step 2: Detailed description of the step]
+[Step 3: Detailed description of the step]
+
+###Example
+Here is an example of how to use the graphical interface of the software:
+
+remplir a partir de l exemple illustratif????
+```sh
+from pyDEMATEL import DEMATELWindow
+app = DEMATELWindow.DEMATELWindow()
+app.window.mainloop()
+```
+
+Here is an example of how to use the graphical interface of the software:
+```sh
+from pyDEMATEL import FuzzyDEMATELSolver
+```
+Inputs:
+```sh
+expert = "Alami"
+factors = [ "A1 ", 
+            "A2 ", 
+            "A3 ", 
+            "A4 ", 
+            "A5 ", 
+           "A6 ", 
+            "A7 ", 
+           "A8",
+           "A9",
+           "A10",           
+           "A11", 
+            "A12 ", 
+            "A13 ", 
+            "A14 ", 
+            "A15 ", 
+           "A16 ", 
+            "A17 ", 
+           "A18"] 
+```
+           
+Linguistic evaluation matrix of marine experts’ consensus. source  https://www.sciencedirect.com/science/article/pii/S0950423015300498
+
+```sh
+valeurs=[
+[(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1)],
+[(0.5, 0.75, 1),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.75, 1, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.5, 0.75, 1)],
+[(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0, 0.25),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75)],
+[(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.75, 1, 1),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0.75, 1, 1),(0.5, 0.75, 1),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5)],
+[(0, 0.25, 0.5),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.75, 1, 1),(0.5, 0.75, 1),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1)],
+[(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.75, 1, 1)],
+[(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75)],
+[(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25)],
+[(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0, 0.25)],
+[(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.75, 1, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.5, 0.75, 1)],
+[(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.75, 1, 1),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0, 0.25),(0.75, 1, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1)],
+[(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.75, 1, 1),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0.75, 1, 1),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1)],
+[(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0.75, 1, 1),(0.25, 0.5, 0.75),(0.75, 1, 1),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.5, 0.75, 1),(0, 0, 0.25),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5)],
+[(0, 0.25, 0.5),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0, 0.25),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0, 0.25),(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1)],
+[(0.25, 0.5, 0.75),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.75, 1, 1),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.5, 0.75, 1),(0, 0, 0.25),(0.75, 1, 1),(0.25, 0.5, 0.75),(0.5, 0.75, 1)],
+[(0, 0.25, 0.5),(0.75, 1, 1),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1),(0.75, 1, 1)],
+[(0, 0, 0.25),(0.5, 0.75, 1),(0.75, 1, 1),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.25, 0.5, 0.75)],
+[(0, 0.25, 0.5),(0.5, 0.75, 1),(0.75, 1, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25)]
+]           
+
+matrices = np.array([np.array(valeurs, dtype=object)])
+```
+Création d'une instance DEMATELSolver
+```sh
+solver = FuzzyDEMATELSolver()
+solver.setMatrix(matrices)
+print(solver.getMatrix())
+solver.addExpert(expert)
+solver.setFactors(factors)
+
+solver.setNumberOfExperts(1)
+solver.setNumberOfFactors(18)
+
+print(solver.getExperts())
+print(solver.getFactors())
+```
+Exécution des étapes
+```sh
+solver.step1()
+print(solver.getFuzzyDirectInfluenceMatrix())
+solver.step2()
+print(solver.getFuzzyNormalizedDirectInfluenceMatrix())
+solver.step3()
+print(solver.getFuzzyTotalInfluenceMatrix())
+solver.step4()
+print(solver.getRalation())
+print(solver.getProminence())
+```
+Generation du graphique
+```sh
+solver.drawCurve()
+```
+
+## Authors
+- Abderrahman Chekry
+- Jamal BakkaS
+- Mohamed Hanine
+- Elizabeth Caro Montero
+- Mirtha Silvana Garat de Marin
+- Imran Ashraf
+
+## Contact
+If you have any questions or suggestions, feel free to contact us at a.chekry@uca.ac.ma.
+
+
+
