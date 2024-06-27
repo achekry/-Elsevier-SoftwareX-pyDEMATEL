@@ -1,7 +1,7 @@
 # pyDEMATEL
 
 [![License: BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
-
+[![Build Status](https://github.com/username/pyDEMATEL/actions/workflows/ci.yml/badge.svg)](https://github.com/username/pyDEMATEL/actions)
 
 ## Table of Contents
 - [Overview](#overview)
