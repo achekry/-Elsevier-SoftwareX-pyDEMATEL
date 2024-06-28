@@ -27,7 +27,7 @@ This separation is designed to offer two ways of using the tool:
 2. **Package Integration Mode**: Allows developers to directly integrate the `DEMATELSolver` or `FuzzyDEMATELSolver` classes into their own applications, without needing the graphical interface.
 
 ## License
-This project is licensed under the BSD License - see the LICENSE file for details.
+This project is licensed under the BSD License - see the `[LICENSE](LICENSE)` file for details.
 
 ## Features
 
@@ -39,11 +39,7 @@ This project is licensed under the BSD License - see the LICENSE file for detail
 ## Installation
 
 ### Prerequisites
-Before you begin, ensure you have met the following requirements:
-- Python 3.x
-- [numpy](https://numpy.org/)
-- [matplotlib](https://matplotlib.org/)
-- [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+Before you begin, ensure that `Python` and `pip` are installed and updated on your system.
 
 ### Steps to Install
 To install the `pyDEMATEL` package, use the following command:
@@ -51,54 +47,56 @@ To install the `pyDEMATEL` package, use the following command:
 ```sh
 pip install pyDEMATEL
 ```
+The following libraries are installed automatically with `pyDEMATEL`:
+- [numpy](https://numpy.org/)
+- [matplotlib](https://matplotlib.org/)
+- [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 
 ## Usage
-To start using `pyDEMATEL`, follow these steps:
-- **Step 1**:  Enter the number of experts and the number of factors.
-- **Step 2**:  Provide the names of experts and factors.
-- **Step 3**:  Enter the evaluation matrix for each expert.
-- **Step 4**:  Generate the results.
-
-### Example
-**Here is an example of how to use the graphical interface of the software**:
 Use the following command to execute the graphical interface of the `pyDEMATEL` software.
 
 ```sh
 pydematel
 ```
+ The steps to follow are : :
+- **Step 1**:  Enter the number of experts and the number of factors.
+- **Step 2**:  Provide the names of experts and factors.
+- **Step 3**:  Choose the solving method: either DEMATEL or FuzzyDEMATEL
+- **Step 4**:  Enter the evaluation matrix for each expert.
+- **Step 5**:  Generate the results.
+
+### Example
+**Here is an example of how to use the graphical interface of the software**:
+
 
 **Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method**:
 ```sh
 from pyDEMATEL.FuzzyDEMATELSolver import FuzzyDEMATELSolver
 import numpy as np
-```
-Inputs:
-```sh
-expert = "Alami"
-factors = [ "A1 ", 
-            "A2 ", 
-            "A3 ", 
-            "A4 ", 
-            "A5 ", 
-           "A6 ", 
-            "A7 ", 
-           "A8",
-           "A9",
-           "A10",           
-           "A11", 
-            "A12 ", 
-            "A13 ", 
-            "A14 ", 
-            "A15 ", 
-           "A16 ", 
-            "A17 ", 
-           "A18"] 
-```
-           
-Linguistic evaluation matrix of marine experts’ consensus: source  https://www.sciencedirect.com/science/article/pii/S0950423015300498
 
-```sh
-valeurs=[
+# Inputs: experts and factors
+expert = "bob"
+factors =  ["A1", 
+            "A2", 
+            "A3", 
+            "A4", 
+            "A5", 
+            "A6", 
+            "A7", 
+            "A8",
+            "A9",
+            "A10",           
+            "A11", 
+            "A12", 
+            "A13", 
+            "A14", 
+            "A15", 
+            "A16", 
+            "A17", 
+            "A18"] 
+    
+# Linguistic evaluation matrix of marine experts’ consensus in other words evaluation matrix for each expert (source  https://www.sciencedirect.com/science/article/pii/S0950423015300498)
+evaluationMatrix=[
 [(0, 0, 0.25),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.5, 0.75, 1)],
 [(0.5, 0.75, 1),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.75, 1, 1),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0.5, 0.75, 1)],
 [(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0.5, 0.75, 1),(0, 0, 0.25),(0.25, 0.5, 0.75),(0.25, 0.5, 0.75)],
@@ -119,24 +117,20 @@ valeurs=[
 [(0, 0.25, 0.5),(0.5, 0.75, 1),(0.75, 1, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0.25, 0.5),(0, 0, 0.25),(0, 0, 0.25),(0, 0.25, 0.5),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0.25, 0.5, 0.75),(0, 0.25, 0.5),(0, 0, 0.25),(0.25, 0.5, 0.75),(0.5, 0.75, 1),(0, 0.25, 0.5),(0, 0, 0.25)]
 ]           
 
-matrices = np.array([np.array(valeurs, dtype=object)])
-```
-Creating an instance of FuzzyDEMATELSolver:
-```sh
+matrices = np.array([np.array(evaluationMatrix, dtype=object)])
+
+# Creating an instance of FuzzyDEMATELSolver
 solver = FuzzyDEMATELSolver()
 solver.setMatrix(matrices)
 print(solver.getMatrix())
 solver.addExpert(expert)
 solver.setFactors(factors)
-
 solver.setNumberOfExperts(1)
 solver.setNumberOfFactors(18)
-
 print(solver.getExperts())
 print(solver.getFactors())
-```
-Executing the steps of the FuzzyDEMATEL method:
-```sh
+
+# Executing the steps of the FuzzyDEMATEL method
 solver.step1()
 print(solver.getFuzzyDirectInfluenceMatrix())
 solver.step2()
@@ -146,9 +140,8 @@ print(solver.getFuzzyTotalInfluenceMatrix())
 solver.step4()
 print(solver.getRalation())
 print(solver.getProminence())
-```
-Generating the graph:
-```sh
+
+# Generating the graph
 solver.drawCurve()
 ```
 **Note** : To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
