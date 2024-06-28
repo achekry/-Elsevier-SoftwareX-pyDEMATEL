@@ -31,9 +31,9 @@ This project is licensed under the BSD License - see the LICENSE file for detail
 
 ## Features
 
-- **Feature 1**: Data Acquisition Methods: Acquires numbers and names of experts and factors and Gathers evaluation matrix values from each expert.
-- **Feature 2**: Matrix Generation Steps: Computes the "direct-influence matrix Z", Generates the "normalized direct-influence matrix X", Creates the "total-influence matrix T" and Produces an "influential Relation Map IRM".
-- **Feature 3**: Output Presentation Methods: Presents outputs in various formats, including graphical representations. and Provides options to generate Excel documents.
+- **Feature 1**: Data Acquisition Methods: Acquires numbers and names of experts and factors and gathers evaluation matrix values from each expert.
+- **Feature 2**: Matrix Generation Steps: Computes the "direct-influence matrix Z", generates the "normalized direct-influence matrix X", creates the "total-influence matrix T" and produces an "influential Relation Map IRM".
+- **Feature 3**: Output Presentation Methods: Presents outputs in various formats, including graphical representations and provides options to generate Excel documents.
 - **Feature 4**: Integration and Flexibility: Designed for integration into Python-based programs and Implements the DEMATEL method comprehensively, ensuring accuracy and completeness.
 
 ## Installation
