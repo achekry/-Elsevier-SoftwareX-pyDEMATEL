@@ -27,7 +27,7 @@ This separation is designed to offer two ways of using the tool:
 2. **Package Integration Mode**: Allows developers to directly integrate the `DEMATELSolver` or `FuzzyDEMATELSolver` classes into their own applications, without needing the graphical interface.
 
 ## License
-This project is licensed under the BSD License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the BSD License - see the [LICENSE.md](LICENSE) file for details.
 
 ## Features
 
