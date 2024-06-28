@@ -2,10 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="pyDEMATEL",
-    version="0.1.3",
+    version="0.1.7",
     packages=find_packages(),
     install_requires=[
-    'tkinter',
     'numpy>=1.22.0',
     'matplotlib>=3.4.3',
     'openpyxl>=3.0.9',
@@ -22,4 +21,9 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    entry_points={
+        'console_scripts': [
+            'pydematel=pyDEMATEL.DEMATELWindow:main',
+        ],
+    },
 )
