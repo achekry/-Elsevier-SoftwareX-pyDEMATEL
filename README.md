@@ -41,7 +41,6 @@ This project is licensed under the BSD License - see the LICENSE file for detail
 ### Prerequisites
 Before you begin, ensure you have met the following requirements:
 - Python 3.x
-- [tkinter](https://docs.python.org/3/library/tkinter.html)
 - [numpy](https://numpy.org/)
 - [matplotlib](https://matplotlib.org/)
 - [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
