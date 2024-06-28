@@ -61,7 +61,7 @@ To start using `pyDEMATEL`, follow these steps:
 
 ### Example
 **Here is an example of how to use the graphical interface of the software**:
-Use the following code to execute the graphical interface of the `pyDEMATEL` software.
+Use the following command to execute the graphical interface of the `pyDEMATEL` software.
 
 ```sh
 pydematel
