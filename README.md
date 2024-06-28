@@ -71,7 +71,8 @@ app.window.mainloop()
 
 **Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method**:
 ```sh
-from pyDEMATEL import FuzzyDEMATELSolver
+from pyDEMATEL.FuzzyDEMATELSolver import FuzzyDEMATELSolver
+import numpy as np
 ```
 Inputs:
 ```sh
