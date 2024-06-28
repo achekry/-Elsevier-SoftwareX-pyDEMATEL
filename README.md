@@ -53,7 +53,7 @@ The following libraries are installed automatically with `pyDEMATEL`:
 - [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
 
 ## Usage
-Use the following command to execute the graphical interface of the `pyDEMATEL` software.
+Use the following command to execute the graphical interface of the `pyDEMATEL` software:
 
 ```sh
 pydematel
@@ -66,8 +66,6 @@ pydematel
 - **Step 5**:  Generate the results.
 
 ### Example
-**Here is an example of how to use the graphical interface of the software**:
-
 
 **Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method**:
 ```sh
@@ -144,7 +142,61 @@ print(solver.getProminence())
 # Generating the graph
 solver.drawCurve()
 ```
-**Note** : To use the DEMATELSolver package, which implements the DEMATEL method, follow the same steps as in the previous example.
+
+**Here is an example demonstrating how to use the DEMATELSolver package, which implements the Classical DEMATEL method**:
+```sh
+from pyDEMATEL.DEMATELSolver import DEMATELSolver
+import numpy as np
+
+# Inputs: experts and factors
+expert = "bob"
+factors = [ "A1", 
+            "A2", 
+            "A3", 
+            "A4", 
+            "A5", 
+            "A6", 
+            "A7", 
+            "A8"]
+    
+# Average matrix in other words evaluation matrix for each expert (source  https://imisc.figshare.com/articles/journal_contribution/paper-codal-etal_pdf/7325816/3)
+matrices= [np.array([[0.00, 1.11, 1.01, 1.41, 1.66, 0.50, 1.60, 2.00],                   
+                      [1.43, 0.00, 2.22, 2.00, 2.40, 1.20, 1.66, 1.33], 
+                      [0.82, 1.00, 0.00, 2.05, 2.44, 1.65, 2.65, 1.88], 
+                      [1.92, 0.80, 1.82, 0.00, 2.75, 3.50, 3.33, 3.10], 
+                      [2.20, 3.11, 1.25, 0.75, 0.00, 2.25, 2.66, 1.75], 
+                      [1.01, 1.31, 1.45, 1.20, 1.44, 0.00, 0.75, 3.00], 
+                      [3.50, 3.20, 2.95, 3.33, 2.88, 1.85, 0.00, 1.40], 
+                      [0.50, 1.25, 1.40, 3.66, 1.00, 2.00, 3.33, 0.00]])]
+
+
+# Creating an instance of DEMATELSolver
+solver = DEMATELSolver()
+solver.setMatrix(matrices)
+print(solver.getMatrix())
+solver.addExpert(expert)
+solver.setFactors(factors)
+solver.setNumberOfExperts(1)
+solver.setNumberOfFactors(8)
+print(solver.getExperts())
+print(solver.getFactors())
+
+# Executing the steps of the FuzzyDEMATEL method
+solver.step1()
+print(solver.getDirectInfluenceMatrix())
+solver.step2()
+print(solver.getNormalizedDirectInfluenceMatrix())
+solver.step3()
+print(solver.getTotalInfluenceMatrix())
+solver.step4()
+print(solver.getRalation())
+print(solver.getProminence())
+
+# Generating the graph
+solver.drawCurve()
+```
+
+
 ## Authors
 - Abderrahman Chekry
 - Jamal Bakkas
