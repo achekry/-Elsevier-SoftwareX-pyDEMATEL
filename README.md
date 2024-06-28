@@ -64,9 +64,7 @@ To start using `pyDEMATEL`, follow these steps:
 Use the following code to execute the graphical interface of the `pyDEMATEL` software.
 
 ```sh
-from pyDEMATEL import DEMATELWindow
-app = DEMATELWindow.DEMATELWindow()
-app.window.mainloop()
+pydematel
 ```
 
 **Here is an example demonstrating how to use the FuzzyDEMATELSolver package, which implements the FuzzyDEMATEL method**:
