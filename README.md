@@ -204,7 +204,7 @@ solver.drawCurve()
 - Elizabeth Caro Montero<sup>3,4,5</sup>
 - Mirtha Silvana Garat de Marin<sup>3,7,8</sup>
 - Imran Ashraf<sup>8</sup>
-<sup>1</sup>LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
+<br/><sup>1</sup>LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
 <sup>2</sup>LTI Laboratory, ENSA, Chouaib Doukkali University, El Jadida, Morocco.
 <sup>3</sup>Universidad Europea del Atlantico. Isabel Torres 21, 39011 Santander, Spain.
 <sup>4</sup>Universidad Internacional Iberoamericana Campeche 24560, Mexico.
