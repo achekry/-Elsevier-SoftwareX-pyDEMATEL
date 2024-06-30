@@ -198,12 +198,20 @@ solver.drawCurve()
 
 
 ## Authors
-- Abderrahman Chekry
-- Jamal Bakkas
-- Mohamed Hanine
-- Elizabeth Caro Montero
-- Mirtha Silvana Garat de Marin
-- Imran Ashraf
+- Abderrahman Chekry<sup>1</sup>
+- Jamal Bakkas<sup>1</sup>
+- Mohamed Hanine<sup>2</sup>
+- Elizabeth Caro Montero<sup>3,4,5</sup>
+- Mirtha Silvana Garat de Marin<sup>3,7,8</sup>
+- Imran Ashraf<sup>8</sup>
+<sup>1</sup>LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
+<sup>2</sup>LTI Laboratory, ENSA, Chouaib Doukkali University, El Jadida, Morocco.
+<sup>3</sup>Universidad Europea del Atlantico. Isabel Torres 21, 39011 Santander, Spain.
+<sup>4</sup>Universidad Internacional Iberoamericana Campeche 24560, Mexico.
+<sup>5</sup>Universidad de La Romana. La Romana, Republica Dominicana.
+<sup>6</sup>Universidad Internacional Iberoamericana Arecibo, Puerto Rico 00613, USA.
+<sup>7</sup>Universidade Internacional do Cuanza. Cuito, Bie, Angola.
+<sup>8</sup>Department of Information and Communication Engineering, Yeungnam University, Gyeongsan 38541, South Korea.
 
 ## Contact
 If you have any questions or suggestions, feel free to contact us at a.chekry@uca.ac.ma.
