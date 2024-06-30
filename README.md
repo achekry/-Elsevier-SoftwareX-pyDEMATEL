@@ -181,7 +181,7 @@ solver.setNumberOfFactors(8)
 print(solver.getExperts())
 print(solver.getFactors())
 
-# Executing the steps of the FuzzyDEMATEL method
+# Executing the steps of the DEMATEL method
 solver.step1()
 print(solver.getDirectInfluenceMatrix())
 solver.step2()
