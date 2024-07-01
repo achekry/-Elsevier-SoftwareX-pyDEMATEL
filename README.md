@@ -2,7 +2,7 @@
 
 [![License: BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-![Graphical interface of pyDEMATEL](img/fig2.png)(#)
+![Graphical interface of pyDEMATEL](img/fig2.png)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -121,27 +121,39 @@ matrices = np.array([np.array(evaluationMatrix, dtype=object)])
 # Creating an instance of FuzzyDEMATELSolver
 solver = FuzzyDEMATELSolver()
 solver.setMatrix(matrices)
+print('********* expert s individual direct influence matrices *********')
 print(solver.getMatrix())
 solver.addExpert(expert)
 solver.setFactors(factors)
 solver.setNumberOfExperts(1)
 solver.setNumberOfFactors(18)
+print('********* List of experts *********')
 print(solver.getExperts())
+print('********* List of Factors *********')
 print(solver.getFactors())
 
 # Executing the steps of the FuzzyDEMATEL method
 solver.step1()
+print('********* Direct Influence Fuzzy Matrix *********')
 print(solver.getFuzzyDirectInfluenceMatrix())
 solver.step2()
+print('********* Normalized Direct Influence Fuzzy Matrix *********')
 print(solver.getFuzzyNormalizedDirectInfluenceMatrix())
 solver.step3()
+print('********* Total Influence Fuzzy Matrix *********')
 print(solver.getFuzzyTotalInfluenceMatrix())
 solver.step4()
+print('********* Relation *********')
 print(solver.getRalation())
+print('********* Prominence *********')
 print(solver.getProminence())
 
 # Generating the graph
 solver.drawCurve()
+
+# Generating excel file
+self.savexl(input("Please enter the destination path for the Excel file:"))
+
 ```
 
 **Here is an example demonstrating how to use the DEMATELSolver package, which implements the Classical DEMATEL method**:
@@ -174,27 +186,39 @@ matrices= [np.array([[0.00, 1.11, 1.01, 1.41, 1.66, 0.50, 1.60, 2.00],
 # Creating an instance of DEMATELSolver
 solver = DEMATELSolver()
 solver.setMatrix(matrices)
+print('********* expert s individual direct influence matrices *********')
 print(solver.getMatrix())
 solver.addExpert(expert)
 solver.setFactors(factors)
 solver.setNumberOfExperts(1)
 solver.setNumberOfFactors(8)
+print('********* List of experts *********')
 print(solver.getExperts())
+print('********* List of Factors *********')
 print(solver.getFactors())
 
 # Executing the steps of the DEMATEL method
 solver.step1()
+print('********* Direct Influence Matrix *********')
 print(solver.getDirectInfluenceMatrix())
 solver.step2()
+print('********* Normalized Direct Influence Matrix *********')
 print(solver.getNormalizedDirectInfluenceMatrix())
 solver.step3()
+print('********* Total Influence Matrix *********')
 print(solver.getTotalInfluenceMatrix())
 solver.step4()
+print('********* Relation *********')
 print(solver.getRalation())
+print('********* Prominence *********')
 print(solver.getProminence())
 
 # Generating the graph
 solver.drawCurve()
+
+# Generating excel file
+self.savexl(input("Please enter the destination path for the Excel file:"))
+
 ```
 
 
