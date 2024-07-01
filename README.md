@@ -152,7 +152,7 @@ print(solver.getProminence())
 solver.drawCurve()
 
 # Generating excel file
-self.savexl(input("Please enter the destination path for the Excel file:"))
+solver.savexl(input("Please enter the destination path for the Excel file:"))
 
 ```
 
@@ -217,7 +217,7 @@ print(solver.getProminence())
 solver.drawCurve()
 
 # Generating excel file
-self.savexl(input("Please enter the destination path for the Excel file:"))
+solver.savexl(input("Please enter the destination path for the Excel file:"))
 
 ```
 
