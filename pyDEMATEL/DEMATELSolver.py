@@ -1,3 +1,20 @@
+# Created by: Abderrahman Chekry (1), Jamal Bakkas (1) , Mohamed Hanin (2), Elizabeth Caro Montero (3,4,5), 
+#             Mirtha Silvana Garat de Marin (3,7,8) and Imran Ashraf (8).
+#                   1 LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
+#                   2 LTI Laboratory, ENSA, Chouaib Doukkali University, El Jadida, Morocco.
+#                   3 Universidad Europea del Atlantico. Isabel Torres 21, 39011 Santander, Spain.
+#                   4 Universidad Internacional Iberoamericana Campeche 24560, Mexico.
+#                   5 Universidad de La Romana. La Romana, Republica Dominicana.
+#                   6 Universidad Internacional Iberoamericana Arecibo, Puerto Rico 00613, USA.
+#                   7 Universidade Internacional do Cuanza. Cuito, Bie, Angola.
+#                   8 Department of Information and Communication Engineering, Yeungnam University, Gyeongsan 38541, South Korea.
+                
+# Updated on Fri Jun 28 17:31:11 2024
+# Created on Mon May 13 09:10:05 2024
+
+# GitHub Repository: <https://github.com/achekry/-Elsevier-SoftwareX-pyDEMATEL>
+# Contact us at a.chekry@uca.ac.ma
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -154,9 +171,10 @@ class DEMATELSolver:
                 num=str(i)
                 ws4[lettre+num] = self.T[i-2, j-2] 
         wb.save(url+"/DEMATELAnalysis.xlsx")
+        print("Excel file successfully created.")
     def testFuction(self):
-            # Exemple d'utilisation
-            expert = "Alami"
+            # Example
+            expert = "bob"
             factors = [ "A1 ", 
                         "A2 ", 
                         "A3 ", 
@@ -166,7 +184,8 @@ class DEMATELSolver:
                         "A7 ", 
                     "A8"]
 
-            # Direct influence matrices for each expert (example)
+            # example source https://imisc.figshare.com/articles/journal_contribution/paper-codal-etal_pdf/7325816/3
+
             matrices = [np.array([[0.00, 1.11, 1.01, 1.41, 1.66, 0.50, 1.60, 2.00],                   
                                 [1.43, 0.00, 2.22, 2.00, 2.40, 1.20, 1.66, 1.33], 
                                 [0.82, 1.00, 0.00, 2.05, 2.44, 1.65, 2.65, 1.88], 
@@ -177,6 +196,7 @@ class DEMATELSolver:
                                 [0.50, 1.25, 1.40, 3.66, 1.00, 2.00, 3.33, 0.00]])]
             # Creating a DEMATELSolver instance
             self = DEMATELSolver()
+            print('********* expert s individual direct influence matrices *********')
             self.setMatrix(matrices)
             self.addExpert(expert)
             self.setFactors(factors)
@@ -185,7 +205,7 @@ class DEMATELSolver:
             self.setNumberOfFactors(8)
 
             print("Factor list :\n",self.getFactors())
-            # Exécution des étapes
+            #Executing the steps of the DEMATEL method
             self.step1()
             print("Direct Influence Matrix :\n",self.getDirectInfluenceMatrix())
             self.step2()
@@ -197,8 +217,3 @@ class DEMATELSolver:
             print("Prominence :\n",self.getProminence())
             self.drawCurve()
             self.savexl(input("Please enter the destination path for the Excel file:"))
-             
-
-
-
-
