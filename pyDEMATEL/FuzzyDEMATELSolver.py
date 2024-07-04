@@ -1,3 +1,20 @@
+# Created by: Abderrahman Chekry (1), Jamal Bakkas (1) , Mohamed Hanin (2), Elizabeth Caro Montero (3,4,5), 
+#             Mirtha Silvana Garat de Marin (3,7,8) and Imran Ashraf (8).
+#                   1 LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
+#                   2 LTI Laboratory, ENSA, Chouaib Doukkali University, El Jadida, Morocco.
+#                   3 Universidad Europea del Atlantico. Isabel Torres 21, 39011 Santander, Spain.
+#                   4 Universidad Internacional Iberoamericana Campeche 24560, Mexico.
+#                   5 Universidad de La Romana. La Romana, Republica Dominicana.
+#                   6 Universidad Internacional Iberoamericana Arecibo, Puerto Rico 00613, USA.
+#                   7 Universidade Internacional do Cuanza. Cuito, Bie, Angola.
+#                   8 Department of Information and Communication Engineering, Yeungnam University, Gyeongsan 38541, South Korea.
+
+# Updated on Fri Jun 28 18:45:38 2024
+# Created on Mon May 13 14:56:18 2024
+
+# GitHub Repository: <https://github.com/achekry/-Elsevier-SoftwareX-pyDEMATEL>
+# Contact us at a.chekry@uca.ac.ma
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -202,11 +219,11 @@ class FuzzyDEMATELSolver:
                 num=str(i)
                 ws4[lettre+num] = "("+str(self.T[i-2, j-2][0])+","+str(self.T[i-2, j-2][1])+","+str(self.T[i-2, j-2][2])+")"    
         wb.save(url+"/DEMATELAnalysis.xlsx")
-        print("Fichier Excel créé avec succès.")
+        print("Excel file successfully created.")
 
     def     testFuction(self):
-            # Exemple d'utilisation
-            expert = "Alami"
+            # Example
+            expert = "bob"
             factors = [ "A1 ", 
                         "A2 ", 
                         "A3 ", 
@@ -251,6 +268,7 @@ class FuzzyDEMATELSolver:
             # Creating a DEMATELSolver instance
             solver = FuzzyDEMATELSolver()
             solver.setMatrix(matrices)
+            print('********* expert s individual direct influence matrices *********')
             print(solver.getMatrix())
             solver.addExpert(expert)
             solver.setFactors(factors)
@@ -263,7 +281,7 @@ class FuzzyDEMATELSolver:
             self.setNumberOfFactors(len(solver.factors))
 
             print("Factor list :\n",self.getFactors())
-
+            #Executing the steps of the FuzzyDEMATEL method
             self.step1()
             print("Direct Influence Fuzzy Matrix :\n",self.getFuzzyDirectInfluenceMatrix())
             self.step2()
@@ -275,7 +293,3 @@ class FuzzyDEMATELSolver:
             print("Prominence :\n",self.getProminence())
             self.drawCurve()
             self.savexl(input("Please enter the destination path for the Excel file:"))
-             
-
-
-
