@@ -1,10 +1,27 @@
+# Created by: Abderrahman Chekry (1), Jamal Bakkas (1) , Mohamed Hanin (2), Elizabeth Caro Montero (3,4,5), 
+#             Mirtha Silvana Garat de Marin (3,7,8) and Imran Ashraf (8).
+#                   1 LAPSSII Laboratory, Graduate School of Technology, Cadi Ayyad University, Safi, Morocco.
+#                   2 LTI Laboratory, ENSA, Chouaib Doukkali University, El Jadida, Morocco.
+#                   3 Universidad Europea del Atlantico. Isabel Torres 21, 39011 Santander, Spain.
+#                   4 Universidad Internacional Iberoamericana Campeche 24560, Mexico.
+#                   5 Universidad de La Romana. La Romana, Republica Dominicana.
+#                   6 Universidad Internacional Iberoamericana Arecibo, Puerto Rico 00613, USA.
+#                   7 Universidade Internacional do Cuanza. Cuito, Bie, Angola.
+#                   8 Department of Information and Communication Engineering, Yeungnam University, Gyeongsan 38541, South Korea.
+
+#Updated on Fri Jun 28 20:03:12 2024
+#Created on Mon May 13 18:23:38 2024
+
+# GitHub Repository: <https://github.com/achekry/-Elsevier-SoftwareX-pyDEMATEL>
+# Contact us at a.chekry@uca.ac.ma
+
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog
 import numpy as np
 import matplotlib.pyplot as plt
-from DEMATELSolver import DEMATELSolver
-from FuzzyDEMATELSolver import FuzzyDEMATELSolver
+from  pyDEMATEL.DEMATELSolver import DEMATELSolver
+from pyDEMATEL.FuzzyDEMATELSolver import FuzzyDEMATELSolver
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 class DEMATELWindow:
@@ -12,7 +29,6 @@ class DEMATELWindow:
         self.window = tk.Tk()
         self.window.title("pyDEMATEL")
         self.window.geometry("1200x700")
-        self.window.state('zoomed')  # Maximize the window (on Windows)
         self.window.attributes("-fullscreen", False)  # Ensure fullscreen is not set
         self.window.grid_columnconfigure(0, weight=1)
         self.MatrixX=[]         
@@ -57,9 +73,7 @@ class DEMATELWindow:
     def createInputNumbersFrame(self):
         frmNumbers = tk.LabelFrame(self.inputFrames,text="Input Numbers", bg="#ECF0F1", padx=10, pady=10, relief='groove', bd=2)
         frmNumbers.grid(row=0, column=0, padx=10, pady=(0, 5), sticky="nsew")
-        #défilement
-        
-        
+             
         
         label1 = tk.Label(frmNumbers, text="Number of experts:",font=('sans serif', 10, 'bold'))
         label1.grid(row=1, column=0, padx=10, pady=5, sticky="w")
@@ -90,7 +104,7 @@ class DEMATELWindow:
         canvas.create_window((0, 0), window=self.frmInnerNames, anchor="nw")
         self.frmInnerNames.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
  
-    # frame boutons DMATEL And Fuzzy DEMATEL resolve  
+    # frame buttons DMATEL And Fuzzy DEMATEL resolve  
     def createButtonsDMATELFrame(self):
         self.frmButtons = tk.Frame(self.inputFrames,bg="#ECF0F1", padx=10, pady=10, relief='groove')
         self.frmButtons.grid(row=0, column=2,padx=10, pady=(0, 5), sticky="nsew")
@@ -226,17 +240,17 @@ class DEMATELWindow:
     def fillMatrixZ(self, tab_name):                  #fillDirect-influence matrix Z
         tab_frame = self.tabsIDs.get(tab_name)
         
-        # Générer le tableau
+        # Generate the table
         if tab_frame:
             table_frames = self.generate_table(tab_frame, self.num_factors, self.num_factors)
             
-            # Titres de la première ligne
+            # Titles of the first row
             titles = [entry.get() for entry in self.FactorsNames]
             for j, title in enumerate(titles):
                 lblTitleFactorInTableTab = ttk.Label(table_frames[0][j + 1], text=title)
                 lblTitleFactorInTableTab.grid(row=0, column=0, padx=5, pady=5)
         
-            # Titres de la première colonne
+            # Titles of the first column
             for i, title in enumerate(titles):
                 lblTitleFactorInTableTab = ttk.Label(table_frames[i + 1][0], text=title)
                 lblTitleFactorInTableTab.grid(row=0, column=0, padx=5, pady=5)
@@ -256,17 +270,17 @@ class DEMATELWindow:
 
         tab_frame = self.tabsIDs.get(tab_name)
         
-        # Générer le tableau
+        # Generate the table
         if tab_frame:
             table_frames = self.generate_table(tab_frame, self.num_factors, self.num_factors)
             
-            # Titres de la première ligne
+            # Titles of the first row
             titles = [entry.get() for entry in self.FactorsNames]
             for j, title in enumerate(titles):
                 lblTitleFactorInTableTab = ttk.Label(table_frames[0][j + 1], text=title)
                 lblTitleFactorInTableTab.grid(row=0, column=0, padx=5, pady=5)
         
-            # Titres de la première colonne
+            # Titles of the first column
             for i, title in enumerate(titles):
                 lblTitleFactorInTableTab = ttk.Label(table_frames[i + 1][0], text=title)
                 lblTitleFactorInTableTab.grid(row=0, column=0, padx=5, pady=5)
@@ -284,7 +298,7 @@ class DEMATELWindow:
     def fillMatrixT(self, tab_name):                  #fill Direct-influence matrix X
         tab_frame = self.tabsIDs.get(tab_name)
         
-        # Générer le tableau
+        # Generate the table
         if tab_frame:
             table_frames = self.generate_table(tab_frame, self.num_factors, self.num_factors)
             
@@ -336,9 +350,8 @@ class DEMATELWindow:
        
     def fillMatrixFuzzyIRM(self, tab_name):                  #fill Direct-influence matrix IRM
         indicators = ["R","C","R+C","R-C"]
-        #self.solver.step4()
         tab_frame = self.tabsIDs.get(tab_name)
-        # Générer le tableau
+        # Generate the table
         if tab_frame:
             table_frames = self.generate_table(tab_frame, self.num_factors,len(indicators))
             titles = [entry.get() for entry in self.FactorsNames]
@@ -393,7 +406,7 @@ class DEMATELWindow:
 
     
     def matrixExpertTab(self, table_frames, nbFactors):
-        # Titres de la première ligne
+        # First line titles
         titles = [entry.get() for entry in self.FactorsNames]
         for j, title in enumerate(titles):
             lblTitleFactorInTableTab = ttk.Label(table_frames[0][j + 1], text=title)
@@ -436,7 +449,7 @@ class DEMATELWindow:
             values_ResultTabsTitles+=["Fuzzy IRM"]
         self.notebookResult.grid(row=1, column=0, columnspan=nb, padx=10, pady=10, sticky="nsew")
         
-        #Titres des onglets
+        #Tabs titles
         self.tabsIDs = {}
         titlesTabs = [entry.get() for entry in self.expertNames]
         for title in values_ResultTabsTitles:
@@ -489,7 +502,7 @@ class DEMATELWindow:
 
          
         
-    # Fonction appelée lors du clic sur le bouton "Resolve"
+    # Function called up when the "Resolve" button is clicked
     def on_btnResolve_click(self):
         self.fillExperts()
         self.fillFactors()
@@ -497,12 +510,13 @@ class DEMATELWindow:
         self.solver.step1()
         self.solver.step2()
         self.solver.step3()
-        self.solver.step4()
-        
-        
+        self.solver.step4()       
         self.createResultTabs()     
+          
+# entry points
+def main():
+    app = DEMATELWindow()
+    app.window.mainloop()
 
-            
-# Lancement de la boucle principale
-app = DEMATELWindow()
-app.window.mainloop()
+if __name__ == '__main__':
+    main()
