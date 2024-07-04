@@ -2,7 +2,7 @@
 
 [![License: BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-![Graphical interface of pyDEMATEL](img/fig2.png)
+![Graphical interface of pyDEMATEL](https://raw.githubusercontent.com/achekry/-Elsevier-SoftwareX-pyDEMATEL/main/img/fig2.png)
 
 ## Table of Contents
 - [Overview](#overview)
