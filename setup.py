@@ -1,8 +1,22 @@
 from setuptools import setup, find_packages
+import sys
+
+# Check for tkinter availability
+try:
+    import tkinter as tk
+except ImportError:
+    print("Warning: tkinter is not available. This package requires tkinter, which is included with Python but might not be installed in some environments.")
+    if sys.platform.startswith('linux'):
+        print("On Linux, you may need to install tkinter separately using your package manager.")
+        print("For Debian/Ubuntu: sudo apt-get install python3-tk")
+        print("For Fedora: sudo dnf install python3-tk")
+    sys.exit(1)  # Optionally exit setup if tkinter is critical
+
+# Define the setup configuration
 
 setup(
     name="pyDEMATEL",
-    version="0.2.1",
+    version="0.2.2",
     packages=find_packages(),
     install_requires=[
     'numpy>=1.22.0',
