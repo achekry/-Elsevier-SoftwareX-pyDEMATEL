@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "Please cite this software using the reference below."
+title: "PyDEMATEL: A Python-based tool implementing DEMATEL and Fuzzy DEMATEL methods for improved decision making"
+authors:
+  - family-names: Chekry
+    given-names: Abderrahman
+  - family-names: Bakkas
+    given-names: Jamal
+  - family-names: Hanine
+    given-names: Mohamed
+  - family-names: Caro Montero
+    given-names: Elizabeth
+  - family-names: Garat de Marin
+    given-names: Mirtha Silvana
+  - family-names: Ashraf
+    given-names: Imran
+version: "1.0"
+date-released: 2024-01-01
+doi: "10.1016/j.softx.2024.101889"
+type: software
+repository-code: "https://github.com/achekry/-Elsevier-SoftwareX-PyDEMATEL"
+license: "MIT"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Chekry
+      given-names: Abderrahman
+    - family-names: Bakkas
+      given-names: Jamal
+    - family-names: Hanine
+      given-names: Mohamed
+    - family-names: Caro Montero
+      given-names: Elizabeth
+    - family-names: Garat de Marin
+      given-names: Mirtha Silvana
+    - family-names: Ashraf
+      given-names: Imran
+  title: "PyDEMATEL: A Python-based tool implementing DEMATEL and fuzzy DEMATEL methods for improved decision making"
+  journal: "SoftwareX"
+  volume: "28"
+  year: 2024
+  pages: "101889"
+  doi: "10.1016/j.softx.2024.101889"
